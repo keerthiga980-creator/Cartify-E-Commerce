@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cartify - Checkout</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛍️ Cartify
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Products</a>
+        </nav>
+
+    </header>
+
+
+    <main class="checkout-page">
+
+        <h1>Checkout</h1>
+
+        <p class="checkout-subtitle">
+            Complete your order
+        </p>
+
+
+        <div class="checkout-container">
+
+            <section class="checkout-form">
+
+                <h2>📦 Delivery Details</h2>
+
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your name"
+                >
+
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter phone number"
+                >
+
+                <label>Address</label>
+                <textarea
+                    id="address"
+                    placeholder="Enter your delivery address"
+                ></textarea>
+
+                <label>City</label>
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Enter city"
+                >
+
+                <label>PIN Code</label>
+                <input
+                    type="text"
+                    id="pincode"
+                    placeholder="Enter PIN code"
+                >
+
+                <h2 class="payment-title">
+                    💳 Payment Method
+                </h2>
+
+                <div class="payment-options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="cod"
+                            checked
+                        >
+                        Cash on Delivery
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="upi"
+                        >
+                        UPI
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="card"
+                        >
+                        Card
+                    </label>
+
+                </div>
+
+                <button
+                    class="place-order-btn"
+                    onclick="placeOrder()"
+                >
+                    Place Order 🛍️
+                </button>
+
+            </section>
+
+
+            <section class="order-summary">
+
+                <h2>🛒 Order Summary</h2>
+
+                <div id="checkoutItems">
+                    <!-- Cart items appear here -->
+                </div>
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cartify - Modern Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛍️ Cartify
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeToggle">🌙</button>
+
+            <button id="cartBtn">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">WELCOME TO CARTIFY</p>
+
+            <h1>
+                Shop Smart.<br>
+                Live Better.
+            </h1>
+
+            <p>
+                Discover products you'll love at prices you'll enjoy.
+            </p>
+
+            <button class="shop-btn" onclick="scrollToProducts()">
+                Shop Now →
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+            🛍️
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section id="categories" class="categories-section">
+
+        <h2>Shop by Category</h2>
+
+        <div class="categories">
+
+            <button class="category-btn active" data-category="All">
+                🛍️ All
+            </button>
+
+            <button class="category-btn" data-category="Electronics">
+                🎧 Electronics
+            </button>
+
+            <button class="category-btn" data-category="Fashion">
+                👕 Fashion
+            </button>
+
+            <button class="category-btn" data-category="Beauty">
+                💄 Beauty
+            </button>
+
+            <button class="category-btn" data-category="Accessories">
+                🎒 Accessories
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <main id="products">
+
+        <div class="products-header">
+
+            <div>
+                <h2>Featured Products</h2>
+                <p>Explore our latest collection</p>
+            </div>
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search products..."
+                >
+
+                <select id="sortFilter">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div id="productsContainer" class="products-grid">
+
+            <!-- Products will appear here -->
+
+        </div>
+
+    </main>
+
+
+    <!-- Cart Sidebar -->
+
+    <div id="cartOverlay" class="overlay"></div>
+
+    <aside id="cartSidebar" class="cart-sidebar">
+
+        <div class="cart-header">
+
+            <h2>🛒 Your Cart</h2>
+
+            <button id="closeCart">×</button>
+
+        </div>
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button
+    class="checkout-btn"
+    onclick="goToCheckout()"
+>
+    Proceed to Checkout
+</button>
+        </div>
+
+    </aside>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
